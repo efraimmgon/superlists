@@ -40,7 +40,7 @@ class NewVisitorTest(LiveServerTestCase):
 
 		# When she hits enter, she is taken to a new URL,
 		# and now the page lists "1: Buy peacock feathers" as an item in a
-		# to-do list table
+		# to-do list table		
 		inputbox.send_keys(Keys.ENTER)
 		edith_list_url = self.browser.current_url
 		self.assertRegex(edith_list_url, '/lists/.+')
