@@ -25,7 +25,10 @@ SECRET_KEY = '%l_^%vd-6ak-*rp31x!q#8tx!6e96bva+ex03)^ah-x1d2!lqt'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# This setting is changed by the deploy script
+DOMAIN = 'localhost'
+
+ALLOWED_HOSTS = [DOMAIN]
 
 AUTH_USER_MODEL = 'accounts.User'
 AUTHENTICATION_BACKENDS = (
@@ -43,6 +46,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'lists',
     'accounts',
+    'functional_tests',
 )
 
 LOGGING = {
