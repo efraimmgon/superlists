@@ -20,7 +20,7 @@ class LoginViewTest(TestCase):
 	):
 		user = User.objects.create(email='a@b.com')
 		user.backend = '' # required for auth_login to work
-		mock_authenticate.return_value = user
+		s.return_value = user
 		response = self.client.post('/accounts/login', {'assertion': 'a'})
 		self.assertEqual(response.content.decode(), 'OK')
 
