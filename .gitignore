@@ -3,3 +3,4 @@ __pycache__
 *.pyc
 superlists.sublime-project
 superlists.sublime-workspace
+functional_tests/screendumps
